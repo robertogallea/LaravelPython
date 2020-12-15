@@ -1,0 +1,28 @@
+{
+  "name": "robertogallea/laravel-python",
+  "description": "Run python scripts inside Laravel app",
+  "require-dev": {
+    "orchestra/testbench": "^6.7",
+    "phpunit/phpunit": "^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "robertogallea\\LaravelPython\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "robertogallea\\LaravelPython\\ServiceProvider"
+      ],
+      "aliases": {
+        "Python": "robertogallea\\LaravelPython\\Facades\\PythonFacade"
+      }
+    }
+  }
+}
