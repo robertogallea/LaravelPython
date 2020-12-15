@@ -23,7 +23,9 @@ use robertogallea\LaravelPython\Services\LaravelPython;
 ...
 
 $service = new LaravelPython();
-$result = $service->run('/path/to/script.py')
+$result = $service->run('/path/to/script.py'):
+$parameters = array('par1', 'par2'):
+$result = $service->run('/path/to/script.py', $parameters):
 ```
 
 2. Injecting from the ServiceContainer
@@ -33,13 +35,23 @@ use robertogallea\LaravelPython\Services\LaravelPython;
 public function __construct(LaravelPython $service)
 {
   $result = $service->run('/path/to/script.py')
+  $parameters = array('par1', 'par2'):
+  $result = $service->run('/path/to/script.py', $parameters):
 }
 ```
 
 3. Using the `Python` facade
 ```
 $result = \Python::run('/path/to/script.py')
+$parameters = array('par1', 'par2'):
+$result = \Python::run'/path/to/script.py', $parameters):
 ```
+
+4. Via command line with an artisan command
+```
+php artisan python:run /path/to/script.py "Some parameter"
+```
+Note that you can use an arbitrary number of parameters
 
 ### Issues, Questions and Pull Requests
 You can report issues and ask questions in the [issues section](https://github.com/robertogallea/LaravelPython/issues). Please start your issue with ISSUE: and your question with QUESTION:
