@@ -44,7 +44,7 @@ public function __construct(LaravelPython $service)
 ```
 $result = \Python::run('/path/to/script.py')
 $parameters = array('par1', 'par2'):
-$result = \Python::run'/path/to/script.py', $parameters):
+$result = \Python::run('/path/to/script.py', $parameters):
 ```
 
 4. Via command line with an artisan command
