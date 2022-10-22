@@ -23,9 +23,9 @@ use robertogallea\LaravelPython\Services\LaravelPython;
 ...
 
 $service = new LaravelPython();
-$result = $service->run('/path/to/script.py'):
-$parameters = array('par1', 'par2'):
-$result = $service->run('/path/to/script.py', $parameters):
+$result = $service->run('/path/to/script.py');
+$parameters = array('par1', 'par2');
+$result = $service->run('/path/to/script.py', $parameters);
 ```
 
 2. Injecting from the ServiceContainer
