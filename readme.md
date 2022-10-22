@@ -34,17 +34,17 @@ use robertogallea\LaravelPython\Services\LaravelPython;
 ...
 public function __construct(LaravelPython $service)
 {
-  $result = $service->run('/path/to/script.py')
-  $parameters = array('par1', 'par2'):
-  $result = $service->run('/path/to/script.py', $parameters):
+  $result = $service->run('/path/to/script.py');
+  $parameters = array('par1', 'par2');
+  $result = $service->run('/path/to/script.py', $parameters);
 }
 ```
 
 3. Using the `Python` facade
 ```
-$result = \Python::run('/path/to/script.py')
-$parameters = array('par1', 'par2'):
-$result = \Python::run('/path/to/script.py', $parameters):
+$result = \Python::run('/path/to/script.py');
+$parameters = array('par1', 'par2');
+$result = \Python::run('/path/to/script.py', $parameters);
 ```
 
 4. Via command line with an artisan command
